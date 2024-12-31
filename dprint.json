@@ -1,0 +1,21 @@
+{
+    "plugins": [
+        "https://plugins.dprint.dev/typescript-0.93.3.wasm",
+        "https://plugins.dprint.dev/json-0.19.4.wasm"
+    ],
+    "typescript": {
+        "useTabs": false,
+        "indentWidth": 4,
+        "lineWidth": 120
+    },
+    "json": {
+        "useTabs": false,
+        "indentWidth": 4,
+        "lineWidth": 120
+    },
+    "excludes": [
+        "node_modules",
+        "dist",
+        "*.lock*"
+    ]
+}

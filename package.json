@@ -1,0 +1,27 @@
+{
+    "name": "typescript-multi-runtime",
+    "version": "1.0.0",
+    "type": "module",
+    "devDependencies": {
+        "@eslint/js": "^9.17.0",
+        "@types/node": "^22.10.2",
+        "dprint": "^0.48.0",
+        "esbuild": "^0.24.2",
+        "eslint": "^9.17.0",
+        "tsx": "^4.19.2",
+        "typescript": "^5.7.2",
+        "typescript-eslint": "^8.19.0"
+    },
+    "dependencies": {
+        "fastify": "^5.2.0",
+        "pino": "^9.6.0"
+    },
+    "scripts": {
+        "lint": "eslint ./src && dprint check './src/**/*'",
+        "fix": "eslint ./src --fix && dprint fmt './src/**/*'",
+        "dev": "tsx --watch src/main.ts",
+        "clean": "rm -rf ./dist/*",
+        "build": "tsx build.ts",
+        "compile": "bun build --compile --outfile=dist/bun-server src/main.ts"
+    }
+}
