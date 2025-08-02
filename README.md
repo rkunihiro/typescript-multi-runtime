@@ -1,6 +1,6 @@
 # TypeScript multi runtime compatible project example
 
-### Node.js 22.x
+### Node.js v22.18.0
 
 Install dependencies
 
@@ -22,7 +22,7 @@ npm run build
 node ./dist/main.mjs
 ```
 
-### Bun 1.1.42
+### Bun 1.2.19
 
 Install dependencies
 
@@ -44,7 +44,7 @@ bun run compile
 ./dist/server-bun
 ```
 
-### Deno 2.1.4
+### Deno 2.4.3
 
 Install dependencies
 

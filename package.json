@@ -3,23 +3,26 @@
     "version": "1.0.0",
     "type": "module",
     "devDependencies": {
-        "@eslint/js": "^9.17.0",
-        "@types/node": "^22.10.2",
-        "dprint": "^0.48.0",
-        "esbuild": "^0.24.2",
-        "eslint": "^9.17.0",
-        "tsx": "^4.19.2",
-        "typescript": "^5.7.2",
-        "typescript-eslint": "^8.19.0"
+        "@eslint/js": "^9.32.0",
+        "@types/node": "^24.1.0",
+        "dprint": "^0.50.1",
+        "esbuild": "^0.25.8",
+        "eslint": "^9.32.0",
+        "tsx": "^4.20.3",
+        "typescript": "~5.8.3",
+        "typescript-eslint": "^8.38.0"
     },
     "dependencies": {
-        "fastify": "^5.2.0",
-        "pino": "^9.6.0"
+        "fastify": "^5.4.0",
+        "pino": "^9.7.0"
     },
     "scripts": {
         "lint": "eslint ./src && dprint check './src/**/*'",
         "fix": "eslint ./src --fix && dprint fmt './src/**/*'",
-        "dev": "tsx --watch src/main.ts",
+        "dev": "node --watch-path=src src/main.ts",
+        "dev:deno": "deno task dev",
+        "dev:bun": "bun --watch src/main.ts",
+        "dev:tsx": "tsx --watch src/main.ts",
         "clean": "rm -rf ./dist/*",
         "build": "tsx build.ts",
         "compile": "bun build --compile --outfile=dist/bun-server src/main.ts"

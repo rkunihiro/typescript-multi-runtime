@@ -6,7 +6,9 @@
     "typescript": {
         "useTabs": false,
         "indentWidth": 4,
-        "lineWidth": 120
+        "lineWidth": 120,
+        "module.sortImportDeclarations": "maintain",
+        "module.sortExportDeclarations": "maintain"
     },
     "json": {
         "useTabs": false,

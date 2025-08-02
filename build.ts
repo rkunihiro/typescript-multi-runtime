@@ -13,6 +13,7 @@ try {
         format: "esm",
         platform: "node",
         target: "node22",
+        packages: "bundle",
 
         bundle: true,
         minify: true,
@@ -22,7 +23,7 @@ try {
 
         external: [],
         define: {
-            "process.env.NODE_ENV": "\"production\"",
+            "process.env.NODE_ENV": '"production"',
         },
         banner: {
             "js": `

@@ -13,11 +13,13 @@ export function createServer(logger?: FastifyBaseLogger) {
 
     server.setErrorHandler((error, request, reply) => {
         request.log.error(error);
-        reply.status(500).send({ status: 500, message: "Internal Server Error" });
+        reply.status(500);
+        return { status: 500, message: "Internal Server Error" };
     });
     server.setNotFoundHandler((request, reply) => {
         request.log.error("Not Found");
-        reply.status(500).send({ status: 404, message: "Not Found" });
+        reply.status(404);
+        return { status: 404, message: "Not Found" };
     });
 
     // Add request handler
